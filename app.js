@@ -14,6 +14,7 @@ app.use(express.static(assetsPath));
 
 app.use(express.urlencoded({ extended: true }));
 
+app.get("/favicon.ico", (req, res) => res.status(204));
 app.use("/new", newRouter);
 app.use("/", indexRouter);
 
