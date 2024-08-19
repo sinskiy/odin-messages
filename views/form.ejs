@@ -1,15 +1,18 @@
 <html>
   <%- include('head', { title }) %>
+  <link rel="stylesheet" href="form.css" />
   <body>
     <h1><%= title %></h1>
-    <form method="POST" action="/new">
-      <div>
-        <%- include('inputField', { type: "text", id: "author", label: "author" }) %>
+    <form method="POST" action="/new" class="form">
+      <div class="input-field">
+        <%- include('inputField', { type: "text", id: "author", label: "author",
+        placeholder: "sinskiy" }) %>
       </div>
-      <div>
-        <%- include('inputField', { type: "text", id: "message", label: "message" }) %>
+      <div class="input-field">
+        <%- include('inputField', { type: "text", id: "message", label:
+        "message", placeholder: "Hello World!" }) %>
       </div>
-      <button type="submit">submit</button>
+      <button class="styled primary" type="submit">submit</button>
     </form>
   </body>
 </html>

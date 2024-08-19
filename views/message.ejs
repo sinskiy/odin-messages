@@ -1,12 +1,12 @@
-<li>
-  <p><%= message.user %></p>
-  <p><%= message.text %></p>
-  <p>
+<li class="message <%= showMessageLinks ? 'interactive' : '' %>">
+  <p class="author"><%= message.user %></p>
+  <p class="date">
     <time datetime="<%= message.added %>"
       ><%= message.added.toLocaleString() %></time
     >
   </p>
+  <p class="text"><%= message.text %></p>
   <% if (showMessageLinks) { %>
-  <a href="/<%= message.id %>">open</a>
+  <a href="/<%= message.id %>" class="link" aria-label="open"></a>
   <% } %>
 </li>

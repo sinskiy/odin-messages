@@ -1,0 +1,29 @@
+.messages {
+  display: grid;
+  gap: 1rem;
+}
+
+.message {
+  padding: 2rem;
+  border-radius: var(--rounded-card);
+  background-color: var(--surface);
+
+  position: relative;
+}
+.message .link {
+  position: absolute;
+  inset: 0;
+}
+.message .author {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+.message .date {
+  margin-bottom: 0.5rem;
+  color: var(--text-variation);
+  font-size: 0.875rem;
+}
+.message .text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
