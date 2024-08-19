@@ -13,8 +13,8 @@ app.use(express.static(assetsPath));
 
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/", indexRouter);
 app.use("/new", newRouter);
+app.use("/", indexRouter);
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`server is running at port ${PORT}`));

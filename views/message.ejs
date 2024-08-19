@@ -6,4 +6,7 @@
       ><%= message.added.toLocaleString() %></time
     >
   </p>
+  <% if (showOpen) { %>
+  <a href="/<%= message.id %>">open</a>
+  <% } %>
 </li>
