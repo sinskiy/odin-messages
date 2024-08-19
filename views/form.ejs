@@ -1,0 +1,15 @@
+<html>
+  <%- include('head', { title }) %>
+  <body>
+    <h1><%= title %></h1>
+    <form method="POST" action="/new">
+      <div>
+        <%- include('inputField', { type: "text", id: "author", label: "author" }) %>
+      </div>
+      <div>
+        <%- include('inputField', { type: "text", id: "message", label: "message" }) %>
+      </div>
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>
