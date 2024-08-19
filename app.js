@@ -1,3 +1,4 @@
+require("dotenv").config();
 const path = require("node:path");
 
 const express = require("express");
@@ -16,5 +17,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/new", newRouter);
 app.use("/", indexRouter);
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`server is running at port ${PORT}`));
+app.listen(process.env.PORT, () =>
+  console.log(`server is running at port ${process.env.PORT}`),
+);
