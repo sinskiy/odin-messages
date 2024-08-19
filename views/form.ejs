@@ -1,8 +1,8 @@
-<html>
+<html lang="en">
   <%- include('head', { title }) %>
   <link rel="stylesheet" href="form.css" />
   <body>
-    <h1><%= title %></h1>
+    <%- include('nav', { title, links }) %>
     <form method="POST" action="/new" class="form">
       <div class="input-field">
         <%- include('inputField', { type: "text", id: "author", label: "author",

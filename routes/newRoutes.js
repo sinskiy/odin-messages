@@ -1,8 +1,10 @@
 const { Router } = require("express");
-const { messages } = require("./indexRoutes");
+const { messages, links } = require("./indexRoutes");
 const router = Router();
 
-router.get("/", (req, res) => res.render("form", { title: "Add new message" }));
+router.get("/", (req, res) =>
+  res.render("form", { title: "Add new message", links }),
+);
 router.post("/", (req, res) => {
   const { message, author } = req.body;
   const nextId = messages.at(-1).id + 1;
