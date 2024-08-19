@@ -4,9 +4,11 @@
     <h1><%= title %></h1>
     <ul>
       <% messages.forEach(message => { %>
-      <%- include('message', { message, showOpen: title !== "message" }) %>
+      <%- include('message', { message, showMessageLinks }) %>
       <% }); %>
     </ul>
+    <% if (showMessageLinks) { %>
     <a href="/new">new message</a>
+    <% } %>
   </body>
 </html>

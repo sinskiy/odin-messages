@@ -17,12 +17,17 @@ const messages = [
 ];
 
 router.get("/", (req, res) =>
-  res.render("index", { title: "Mini Messageboard", messages }),
+  res.render("index", {
+    title: "Mini Messageboard",
+    messages,
+    showMessageLinks: true,
+  }),
 );
 router.get("/:messageId", (req, res) =>
   res.render("index", {
-    title: "message",
+    title: "Message",
     messages: [messages[req.params.messageId]],
+    showMessageLinks: false,
   }),
 );
 
