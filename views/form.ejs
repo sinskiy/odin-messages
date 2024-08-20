@@ -6,12 +6,12 @@
     <%- include('nav', { title, links }) %>
     <form method="POST" action="/new" class="form">
       <div class="input-field">
-        <%- include('inputField', { type: "text", id: "author", label: "author",
-        placeholder: "sinskiy" }) %>
+        <%- include('inputField', { type: "text", id: "username", label:
+        "username", placeholder: "sinskiy" }) %>
       </div>
       <div class="input-field">
-        <%- include('inputField', { type: "text", id: "message", label:
-        "message", placeholder: "Hello World!" }) %>
+        <%- include('inputField', { type: "text", id: "text", label: "text",
+        placeholder: "Hello World!" }) %>
       </div>
       <button class="styled primary" type="submit">submit</button>
     </form>

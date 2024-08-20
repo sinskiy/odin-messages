@@ -1,8 +1,8 @@
 <li class="message <%= showMessageLinks ? 'interactive' : '' %>">
-  <p class="author"><%= message.user %></p>
+  <p class="username"><%= message.username %></p>
   <p class="date">
-    <time datetime="<%= message.added %>"
-      ><%= message.added.toLocaleString() %></time
+    <time datetime="<%= message.created_at %>"
+      ><%= new Date(message.created_at).toLocaleString() %></time
     >
   </p>
   <p class="text"><%= message.text %></p>
